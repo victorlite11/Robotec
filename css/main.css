@@ -240,7 +240,7 @@ iframe {
   right: 16px;
 }
 .hide{
-	display:none;
+display:none !important;
 }
 
 

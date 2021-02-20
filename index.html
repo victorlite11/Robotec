@@ -21,7 +21,10 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
 <!--===============================================================================================-->
+
+<script src="./js/video.js" defer></script> <!-- Script that controls the video -->
 </head>
 <body>	
 	<div class="limiter">
@@ -29,20 +32,41 @@
 			<div class="wrap-login100 p-t-190 p-b-30">
 				<form class="login100-form validate-form">
 					<div class="login100-form-avatar">
-						<img src="images/avatar-01.jpg" alt="AVATAR">
+						<img src="images/avatar-01.jpg" class="man-picture" alt="AVATAR">
 					</div>
-					<div class="video hide">
-					<video width="300" height="240" controls>
-						<source src="images/movie.mp4" type="video/mp4"alt="AVATAR">
+					<div>
+						<!-- Video initially hidden -->
+						<!-- The video controls are removed, set it back by adding controls attribute to the video element -->
+						<video class="video hide" width="300" height="240">
+							<source src="images/movie.mp4" type="video/mp4"alt="AVATAR">
 						</video>
 					</div>
 
-					<span class="login100-form-title p-t-20 p-b-45">
+					<span class="hide adex-lue-span login100-form-title p-t-20 p-b-45">
 						Adex Lue<br>
 						<i>Procurement Manager</i>
 					</span>
 
-					<div class="wrap-input100 validate-input m-b-10" data-validate = "Email is required">
+					<span class="hide account-ownership-confirmation-span p-l-45">
+						Are you the owner of this account?
+					</span>
+
+					<span class="hide client-email-span login100-form-title p-t-20 p-b-45">
+						clientemail@example.com
+					</span>
+
+
+
+					<!-- loader container -->
+					<div class="loader-container login100-form-title p-t-20 p-b-45">
+						<!-- this mimics a loading event on the screen -->
+						<div class="loader"></div>
+					</div>
+
+
+
+
+					<div class="wrap-input100 hide validate-input m-b-10" data-validate = "Email is required">
 						<input class="input100" type="text" name="username" placeholder="Email">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
@@ -50,7 +74,7 @@
 						</span>
 					</div>
 
-					<div class="wrap-input100 validate-input m-b-10" data-validate = "Password is required">
+					<div class="wrap-input100 hide pswd validate-input m-b-10" data-validate = "Password is required">
 						<input class="input100" type="password" name="pass" placeholder="Password">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
@@ -58,33 +82,36 @@
 						</span>
 					</div>
 
-					<div class="container-login100-form-btn p-t-10">
+					<div class="hide btn container-login100-form-btn p-t-10 hide">
 						<button class="login100-form-btn">
-							Login
+							Confirm
 						</button>
 					</div>
-					<span class="fa-stack fa-2x">
-					<i class="fa fa-circle fa-stack-2x icon-background"></i>
-					<i class="fa fa-volume-up fa-stack-1x" href="#"></i>
-					</span>
-					<span class="fa-stack fa-2x">
-					<i class="fa fa-circle fa-stack-2x icon-background"></i>
-					<i class="fa fa-microphone fa-stack-1x" href="#"></i>
-					</span>
-					<span class="fa-stack fa-2x">
-					<i class="fa fa-circle fa-stack-2x icon-background"></i>
-					<i class="fa fa-video-camera fa-stack-1x" href="#"></i>
-					</span>
-					<span class="fa-stack fa-2x">
-					<i class="fa fa-circle fa-stack-2x icon-background"></i>
-					<i class="fa fa-phone fa-stack-1x" href="www.facebook.com"></i>
-					</span>
-					<div class="text-center w-full p-t-25 p-b-230">
+					<div class="video-icons-container login100-form">
+						<span class="fa-stack fa-2x">
+						<i class="fa fa-circle fa-stack-2x icon-background"></i>
+						<i class="fa fa-volume-up fa-stack-1x" href="#"></i>
+						</span>
+						<span class="fa-stack fa-2x">
+						<i class="fa fa-circle fa-stack-2x icon-background"></i>
+						<i class="fa fa-microphone fa-stack-1x" href="#"></i>
+						</span>
+						<span class="fa-stack fa-2x">
+						<i class="fa fa-circle fa-stack-2x icon-background"></i>
+						<i class="fa fa-video-camera fa-stack-1x" href="#"></i>
+						</span>
+						<span class="fa-stack fa-2x">
+						<i class="fa fa-circle fa-stack-2x icon-background"></i>
+						<i class="fa fa-phone fa-stack-1x" href="www.facebook.com"></i>
+						</span>	
+					</div>
+
+					<div class="text-center w-full p-t-25 p-b-230 hide">
 						<a href="#" class="txt1">
 							Forgot Username / Password?
 						</a>
 					</div>
-					<div class="text-center w-full">
+					<div class="text-center w-full hide">
 						<a class="txt1" href="#">
 							Create new account
 							<i class="fa fa-long-arrow-right"></i>						
