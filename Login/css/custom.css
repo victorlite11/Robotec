@@ -1,13 +1,39 @@
-.loader {
-    height: 2px;
-    width: 6px;
-    background-color: black;
+.container-login100-form-btn {
+    display: flex !important;
+}
 
-    /* if you want the loader to go front and back, uncomment the line below and comment the line after it */
+.client-email-span, .email-confirmation-span {
+    font-size: 1.7em;
+    padding: .9em;
+    color: honeydew;
+}
 
-    /*animation: loading 2s ease-in-out infinite alternate;*/
-    animation: loading 2s ease-in-out infinite;
-    transition: all 2s ease-in-out;
+.account-ownership-confirmation-span {
+    font-size: 1.3em;
+    padding: .9em;
+
+}
+
+.ringtone {
+    width: 355px;
+    height: 155px;
+}
+
+.my-btn {
+    padding: .3em;
+    font-size: 1.2em;
+    background-color: white;
+    border-radius: 1em;
+    width: 7em;
+}
+
+.my-btn:first-child {
+    color: red;
+    margin-right: 2em;
+}
+
+.my-btn:last-child {
+    color: green;
 }
 
 /* loading animation */
